@@ -2,6 +2,12 @@
 
 `render.yaml` beskriver én gratis Docker Web Service i Frankfurt. Samme proces serverer spillet og WebSocket-forbindelserne. Der skal ikke tilføjes database, disk, miljøhemmeligheder eller en separat frontend.
 
+## Klargjort deployment
+
+Koden er pushet til det private repository [ItsRealDennis/stormskud](https://github.com/ItsRealDennis/stormskud). Render CLI er logget ind, og `render blueprints validate render.yaml --output json` har returneret `valid: true` med én tjeneste.
+
+Render har endnu ikke kunnet hente det private repository, så tjenesten er **ikke oprettet**, og der er endnu intet offentligt spillink. Forbind GitHub under [Render Account Settings](https://dashboard.render.com/u/settings) → Account Security → Git Deployment Credentials → Add credential, hvis det ikke allerede er forbundet. Giv derefter [Render-appen på GitHub](https://github.com/apps/render/installations/new) adgang til `ItsRealDennis/stormskud`.
+
 ## Udgiv koden og opret tjenesten
 
 1. Push projektet til et GitHub- eller GitLab-repository, som din Render-konto kan læse. Medtag `render.yaml`, `Dockerfile`, `package.json`, `package-lock.json`, `server/` og `public/`; undlad lokale hemmeligheder, `node_modules/` og `artifacts/`.
