@@ -1,0 +1,24 @@
+{
+  "name": "stormskud",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test test/*.test.js",
+    "test:browser": "node test/browser.mjs",
+    "test:public": "node test/public-smoke.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "railway": "3.11.0"
+  }
+}

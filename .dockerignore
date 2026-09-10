@@ -1,0 +1,8 @@
+node_modules
+artifacts
+.git
+test
+*.log
+.env
+.env.*
+.railway
